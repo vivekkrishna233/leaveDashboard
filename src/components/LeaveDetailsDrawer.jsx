@@ -1,6 +1,6 @@
 import React from 'react'
 import { Drawer, Box, Typography } from '@mui/material'
- 
+
 export default function LeaveDetailsDrawer({
   open,
   toggleDrawer,
@@ -27,7 +27,7 @@ export default function LeaveDetailsDrawer({
           >
             Leave Details
           </Typography>
-          {/* Close Button */}
+          
           <button
             onClick={toggleDrawer(false)}
             className="text-gray-500 hover:text-gray-700 focus:outline-none text-xl"
@@ -37,80 +37,64 @@ export default function LeaveDetailsDrawer({
         </Box>
         {selectedRow && (
           <Box className="space-y-4">
-            {/* Column Layout for larger screens, stack layout for smaller screens */}
-            <Box className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Labels */}
-              <Box className="space-y-4">
+            <Box className="space-y-2">
+    
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
                 <Typography
                   variant="body1"
                   className="text-sm font-semibold text-gray-800"
                 >
-                  Leave Type:
+                  Leave Type
                 </Typography>
                 <Typography
                   variant="body1"
-                  className="text-sm font-semibold text-gray-800"
+                  className="text-sm text-gray-600"
                 >
-                  Date:
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-sm font-semibold text-gray-800"
-                >
-                  Status:
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-sm font-semibold text-gray-800"
-                >
-                  Requested By:
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-sm font-semibold text-gray-800"
-                >
-                  Requested Date:
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-sm font-semibold text-gray-800"
-                >
-                  Approved By:
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-sm font-semibold text-gray-800"
-                >
-                  Approved Date:
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-sm font-semibold text-gray-800"
-                >
-                  Reason:
+                  Casual Leave
                 </Typography>
               </Box>
-              {/* Values */}
-              <Box className="space-y-4">
+              
+            
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
                 <Typography
                   variant="body1"
-                  className="text-sm text-gray-600"
+                  className="text-sm font-semibold text-gray-800"
                 >
-                  Casual Leave to 21-08-2024
+                  Date
                 </Typography>
                 <Typography
                   variant="body1"
                   className="text-sm text-gray-600"
                 >
-                  20-08-2024
+                  02-Jun-2024 to 03-Jun-2024
+                </Typography>
+              </Box>
+              
+              {/* Row for Status */}
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
+                <Typography
+                  variant="body1"
+                  className="text-sm font-semibold text-gray-800"
+                >
+                  Status
                 </Typography>
                 <Typography
                   variant="body1"
                   className="text-sm text-gray-600"
                 >
                   <span className="inline-block px-2 py-1 text-sm font-medium text-green-700 bg-green-100 rounded-full">
-                    Approve
+                    Approved
                   </span>
+                </Typography>
+              </Box>
+              
+              
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
+                <Typography
+                  variant="body1"
+                  className="text-sm font-semibold text-gray-800"
+                >
+                  Requested By
                 </Typography>
                 <Typography
                   variant="body1"
@@ -118,29 +102,70 @@ export default function LeaveDetailsDrawer({
                 >
                   Suresh
                 </Typography>
+              </Box>
+              
+            
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
                 <Typography
                   variant="body1"
-                  className="text-sm text-gray-600"
+                  className="text-sm font-semibold text-gray-800"
                 >
-                  04 -June-2024 to 11:05:00 AM
+                  Requested Date
                 </Typography>
                 <Typography
                   variant="body1"
                   className="text-sm text-gray-600"
                 >
-                  Komaraval
+                  04-Jun-2024 11:00:00 AM
+                </Typography>
+              </Box>
+              
+              
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
+                <Typography
+                  variant="body1"
+                  className="text-sm font-semibold text-gray-800"
+                >
+                  Approved By
                 </Typography>
                 <Typography
                   variant="body1"
                   className="text-sm text-gray-600"
                 >
-                  04 -June-2024 to 01:05:00 PM
+                  Komaravel
+                </Typography>
+              </Box>
+              
+              
+              <Box className="flex justify-between border-b border-gray-200 pb-2">
+                <Typography
+                  variant="body1"
+                  className="text-sm font-semibold text-gray-800"
+                >
+                  Approved Date
                 </Typography>
                 <Typography
                   variant="body1"
                   className="text-sm text-gray-600"
                 >
-                  Personal Leave "this test can go up to 2-3 lines"
+                  04-Jun-2024 11:00:00 AM
+                </Typography>
+              </Box>
+              
+              
+              <Box className="flex justify-between pb-2">
+                <Typography
+                  variant="body1"
+                  className="text-sm font-semibold text-gray-800"
+                >
+                  Reason
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className="text-sm text-gray-600 break-words"
+                  sx={{paddingLeft:"10% !important"}}
+                >
+                  Personal Leave. [This text can go up to two or three lines here like this.]
                 </Typography>
               </Box>
             </Box>

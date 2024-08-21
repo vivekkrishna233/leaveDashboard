@@ -12,6 +12,10 @@
   color: #667085 !important;
   font-weight: 300 !important;
 }
+
+.header-icon{
+  margin-left:98% !important;
+}
 .card_data{
   display: flex !important;
 }
