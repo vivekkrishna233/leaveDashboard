@@ -1,6 +1,6 @@
 import React from 'react'
 import { Drawer, Box, Typography } from '@mui/material'
-
+ 
 export default function LeaveDetailsDrawer({
   open,
   toggleDrawer,
@@ -11,9 +11,16 @@ export default function LeaveDetailsDrawer({
       anchor="right"
       open={open}
       onClose={toggleDrawer(false)}
+      sx={{
+        '& .MuiDrawer-paper': {
+          width: '100%',
+          maxWidth: '600px',
+          boxSizing: 'border-box',
+        },
+      }}
     >
-      <Box className="w-[600px] p-6 bg-white rounded-lg shadow-md">
-        <Box className="flex justify-between items-center">
+      <Box className="p-4 bg-white rounded-lg shadow-md h-full max-w-full sm:max-w-[600px]">
+        <Box className="flex justify-between items-center mb-4">
           <Typography
             variant="h6"
             className="font-semibold text-lg"
@@ -23,19 +30,17 @@ export default function LeaveDetailsDrawer({
           {/* Close Button */}
           <button
             onClick={toggleDrawer(false)}
-            className="text-gray-500 hover:text-gray-700 focus:outline-none"
+            className="text-gray-500 hover:text-gray-700 focus:outline-none text-xl"
           >
             &#x2715;
           </button>
         </Box>
         {selectedRow && (
-          <Box className="mt-4">
-            {/* Column Layout */}
-            <Box className="grid grid-cols-2 gap-4">
+          <Box className="space-y-4">
+            {/* Column Layout for larger screens, stack layout for smaller screens */}
+            <Box className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Labels */}
               <Box className="space-y-4">
-                {' '}
-                {/* Increased space between rows */}
                 <Typography
                   variant="body1"
                   className="text-sm font-semibold text-gray-800"
@@ -87,8 +92,6 @@ export default function LeaveDetailsDrawer({
               </Box>
               {/* Values */}
               <Box className="space-y-4">
-                {' '}
-                {/* Increased space between rows */}
                 <Typography
                   variant="body1"
                   className="text-sm text-gray-600"
