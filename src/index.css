@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.css-hip9hq-MuiPaper-root-MuiAppBar-root{
+.MuiPaper-root-MuiAppBar-root{
   background: #ffff !important;
   color: #667085 !important;
   font-weight: 300 !important;
