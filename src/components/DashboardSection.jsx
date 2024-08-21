@@ -67,7 +67,7 @@ const DashboardSection = () => {
           <ApplyLeaveButton />
         </div>
       </div>
-      <div className="flex">
+      <div className="flex desktop-view">
         <div className="mb-4">
           <Slider
             ref={sliderRef}
